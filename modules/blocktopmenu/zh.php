@@ -1,0 +1,36 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_e5b7525b4214a759876af4448bd6b87d'] = '顶部水平菜单';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_925a8a825a28f69e7a96f5996f9cfcc5'] = '添加顶部新菜单。';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_597582c140dd691b522fe42299a24d34'] = '设置更新';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_b9129c167a73844d16d28b0949719155'] = '无法更新设置';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_5eef1a8aef991f41dc621dd69e97ad80'] = '无法添加此链接';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_11ad009c1b7c0615be18fe91185c179a'] = '该链接已添加';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_15772d25000bce9fc3a2a2fd7d41a717'] = '该链接已被删除';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_f4f70727dc34561dfde1a3c529b6205c'] = '设置';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_9dea4016dbcc290b773ab2fae678aaa8'] = '项目';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_1063e38cb53d94d386f21227fcd84717'] = '清除';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_c7da501f54544eba6787960200d9efdb'] = 'CMS';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_ec136b444eede3bc85639fac0dd06229'] = '提供者';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_c0bd7654d5b278e65f21cf4e9153fdb4'] = '生产厂家';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_af1b98adf7f686b84cd0b443e022b7a0'] = '分类';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_068f80c7519d0528fb08e82137a72131'] = '产品';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_ac3b3f2d1984171e48eaa3d0bc56d75f'] = '选择产品ID';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_56e8bf6c54f1638e7bce5a2fcd5b20fe'] = '菜单顶部链接';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_ec211f7c20af43e742bf2570c3cb84f9'] = '增加';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_fcd7ab4061bb3846392cc34376902165'] = '设定产品ID';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_97f08a40f22a625d0cbfe03db3349108'] = '产品ID';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_8cc149b77eaece54cee2e7e02f40018a'] = '搜索栏';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_c436854b135c3dd00ab95b2d4344b0ed'] = '保存';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_9f1b01ac44ff287d5b8ed20ec8ee180b'] = '增加菜单顶部链接';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_b021df6aac4654c454f46c77646e745f'] = '标签';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_97e7c9a7d06eac006a28bf05467fcc8b'] = '链接';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_7a115fe2bd8b94ead1550a2da953cf87'] = '新窗口';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_19488f2956dc859eb635dbb0deaa15e1'] = '增加';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_814579fdad9baf2cdcac456468265384'] = '菜单顶部链接列表';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_4443702c8a13a65ac66d074b7a82af9a'] = '链接ID';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_004bf6c9a40003140292e97330236c53'] = '操作';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_93cba07454f06a4a960172bbd6e2a435'] = '是';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_bafd7322c6e97d25b6299b5d6fe8920b'] = '否';
