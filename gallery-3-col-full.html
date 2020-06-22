@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-
-	<head>
+<html lang="en"><head>
+    
 		<!-- Meta -->
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -387,5 +386,20 @@
 			<script src="assets/js/jquery.inview.min.js"></script>						
 		<!-- scripts js -->
         <script src="assets/js/scripts.js"></script>
+      <script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+ 
     </body>
 </html>
