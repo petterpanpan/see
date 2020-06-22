@@ -1,7 +1,0 @@
-<div class="list-group">
-{loop plugins::categoryinfo($_catid) $cat}
-{loop categories($cat['catid']) $i $cat}
-<a href="{$cat['url']}" class="list-group-item{if $i<1} active{/if}">{$cat['catname']}</a>
-{/loop}
-{/loop}
-</div>

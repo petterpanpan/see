@@ -1,1 +1,0 @@
-D:\PHPnow-1.5.6\htdocs\C2/config/help.php

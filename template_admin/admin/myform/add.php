@@ -1,1 +1,0 @@
-<?php $this->render('myform/edit.php');?>
