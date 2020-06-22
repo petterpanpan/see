@@ -155,13 +155,13 @@
 							<form id="contact-form" method="post" enctype="multipart/form-data">
 								<div class="row">
 									<div class="form-group col-md-6">
-										<input type="text" name="name" class="form-control" placeholder="Name" required="required">
+										<input type="text" name="name" class="form-control" placeholder="Name" required>
 									</div>
 									<div class="form-group col-md-6">
-										<input type="email" name="email" class="form-control" placeholder="Email" required="required">
+										<input type="email" name="email" class="form-control" placeholder="Email" required>
 									</div>
 									<div class="form-group col-md-12">
-										<textarea rows="6" name="message" class="form-control" placeholder="Your Message" required="required"></textarea>
+										<textarea rows="6" name="message" class="form-control" placeholder="Your Message" required></textarea>
 									</div>
 									<div class="col-md-12 text-center">
 										<button type="submit" value="Send message" name="submit" id="submitButton" class="btn btn-lg btn-light-bg" title="Submit Your Message!">Post comment</button>
@@ -178,7 +178,7 @@
 						</div>
 						<div class="blog_subscribe_me">
 							<h4 class="blog_single_title">Subscribe me</h4>
-							<form novalidate="" target="_blank" class="validate" name="mc-embedded-subscribe-form" method="post" action="http://site90.us11.list-manage.com/subscribe/post?u=599a2153f4b86cb2f92d4af3a&amp;id=26d7c26287">
+							<form novalidate target="_blank" class="validate" name="mc-embedded-subscribe-form" method="post" action="http://site90.us11.list-manage.com/subscribe/post?u=599a2153f4b86cb2f92d4af3a&amp;id=26d7c26287">
 								<input type="email" placeholder="Enter Email" id="mce-email" class="form-control" name="EMAIL">
 								<span><button class="btn btn-light-bg" name="subscribe" type="submit">Subscribe</button></span>
 								<div id="mce-responses">
@@ -466,5 +466,115 @@
 			<script src="assets/js/jquery.inview.min.js"></script>			
 		<!-- scripts js -->
         <script src="assets/js/scripts.js"></script>
+        import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;  
+ private static final String BASE_URL = "https://www.baidu.com/s?wd=site:";   
+
+    /**
+     * 查询网址是否被收录
+     */
+
+ public Object getIncluded(String url) {
+        Map<String,Object> map = new HashMap<String, Object>();
+        boolean a = true;
+        a = true;
+        while (a) {
+            String data = this.html(url);
+            if(data.length()<2000){
+                System.out.println(data);
+                try {
+                    Thread.sleep(100);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }else{
+            //找到相关结果数约
+            String startLabel = "<span class=\"nums_text\">";
+            String endLabel = "</span>";
+            int start = data.indexOf(startLabel)+startLabel.length();
+            int end =  data.indexOf(endLabel,start);
+            String Result = data.substring(start, end);
+
+            String str = Result;
+            str=str.trim();
+            String str2="";
+            if(str != null && !"".equals(str)){
+                for(int i=0;i<str.length();i++){
+                    if(str.charAt(i)>=48 && str.charAt(i)<=57){
+                        str2+=str.charAt(i);
+                    }
+                }
+            }
+            map.put("number", str2);
+            if("0".equals(str2)){map.put("type",false);}else{map.put("type",true);}
+            a=false;
+            }
+        }
+        return map;
+    }
+
+ 
+
+/**
+     * 请求百度搜索结果页，并返回html源码
+     */
+    private String html(String keywords) {
+        String html = null;
+        try {
+            String url = BASE_URL + keywords;
+            CloseableHttpClient client = HttpClients.createDefault();
+            HttpGet get = new HttpGet(url);
+            try {
+                get.addHeader("Accept-Language","*,*;q=0.9,zh-TW;q=0.9");
+                get.addHeader("User-Agent", "Chrome/77.0.3865.120 Safari/537.36");
+                CloseableHttpResponse response = client.execute(get);
+                HttpEntity entity = response.getEntity();
+                if (entity != null) {
+                    html = EntityUtils.toString(entity);
+                }
+                EntityUtils.consume(entity);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return html;
+    }
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Example",
+    "url": "http://www.example.com",
+    "logo": "http://www.example.com/images/logo.png"
+  }
+</script>
+    <</span><script>
+(function(){
+   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?d7af82f5d5a7d431d4b53f4d0069f989":"https://jspassport.ssl.qhimg.com/11.0.1.js?d7af82f5d5a7d431d4b53f4d0069f989";
+   document.write('
+百度收录
+<</span>script>
+(function(){
+    var bp = document.createElement_x_x('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+       bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';       
+    }
+    else {
+       bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+   s.parentNode.insertBefore(bp, s);
+})();
+</</span><script>
     </body>
 </html>
