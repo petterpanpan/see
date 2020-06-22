@@ -1,0 +1,142 @@
+{template 'header.html'}<div class="view-html">
+	<div class="container-fluid clearfix column layout_530030">
+		<div class="row">
+			{template 'system/slide.html'}
+		</div>
+	</div>
+	<div class="container clearfix column layout_695563" style="padding-top: 20px;">
+		<div class="row">
+			{template 'position.html'}
+		</div>
+	</div>
+	<div class="container-fluid clearfix column layout_32059">
+		<div class="container clearfix column layout_934894">
+			<div class="col-md-3 layout_88989">
+				<div class="row column">
+					<div class="column layout_258415">
+						<div id="metismenu">
+							<ul class="metismenu" id="list-category">
+								{loop categories_nav() $t}
+								<li class="{if isset($topid) && $topid==$t['catid']}mm-active{/if}">
+									 <a title=" {$t['catname']}" href=" {$t['url']}" aria-expanded="false">{$t['catname']} {if count(categories($t['catid']))}<span class="glyphicon arrow"></span> {/if}</a> {if count(categories($t['catid']))}
+									<ul aria-expanded="false" class="mm-collapse">
+										{loop categories_nav($t['catid']) $t1}
+										<li>
+											<a title=" {$t1['catname']}" href=" {$t1['url']}">{$t1['catname']}</a> {if count(categories($t1['catid']))}<span class="fa plus-times"></span> {/if} {if count(categories($t1['catid']))}
+											<ul aria-expanded="false" class="mm-collapse">
+												{loop categories_nav($t1['catid']) $t2}
+												<li>
+													<a title=" {$t2['catname']}" href=" {$t2['url']}">{$t2['catname']}</a>
+												</li> {/loop}
+											</ul> {/if}
+										</li> {/loop}
+									</ul> {/if}
+								</li> {/loop}
+							</ul>
+						</div>
+						<div class="clearfix">
+						</div>
+					</div>
+					<div class="column layout_869016" style="padding-top: 30px; padding-bottom: 30px; background-color: rgb(238, 238, 238);">
+						<div class="row">
+							<form name="search" action="/index.php?case=archive&act=search" method="post">
+								<div class="col-lg-1">
+								</div>
+								<div class="col-lg-10">
+									<div class="input-group">
+										<input type="text" name="keyword" class="form-control" /> <span class="input-group-btn"> 
+											<button class="btn btn-default" name="submit" type="submit">
+												搜索
+											</button></span>
+									</div>
+								</div>
+								<div class="col-lg-1">
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="column layout_776322">
+						<hr />
+					</div>
+					<div class="column layout_415135">
+						<div class="visual-text-box">
+							<p>
+								<strong>公告列表</strong>
+							</p>
+						</div>
+					</div><hr />
+					<div class="column layout_158987">
+						<ol class="announ-list">
+							{loop announ(5) $an}
+							<li>
+								 <span class="pull-right">{$an['adddate']}</span> <a title="{$an['title']}" href="{$an['url']}" target="_blank">{$an['title']}</a>
+							</li> {/loop}
+							
+						</ol>
+						<div class="column layout_220991">
+							<hr />
+						</div>
+					</div>
+					<div class="column layout_158426">
+						<div class="visual-text-box" style="margin-top: 30px;">
+							<p>
+								<strong>联系信息</strong>
+							</p>
+						</div>
+					</div>
+					<div class="column layout_96566" style="padding-right: 0px; padding-bottom: 60px;">
+						<hr />
+						<p>
+							地 址：{config::get('address')}
+						</p>
+						<p>
+							邮政编码：{config::get('postcode')}
+						</p>
+						<p>
+							电 话：{config::get('tel')}
+						</p>
+						<p>
+							手机：{config::get('mobile')}
+						</p>
+						<p>
+							邮 箱：{config::get('email')}
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9 layout_458406">
+				<div class="row column">
+					<div class="column layout_380535" style="margin-left: 30px;">
+						<div class="column">
+							{loop $archives $i $archive}
+							<div class="news-list list-border">
+								<div class="list-date">
+									 <span>{=sdate($archive['adddate'],'d')}</span>
+									<p>
+										{=sdate($archive['adddate'],'Y-m')}
+									</p>
+								</div>
+								<h4>
+									<a title="{$archive['stitle']}" href="{$archive['url']}" target="_blank" class="list_page_t">{$archive['title']}</a>
+								</h4>
+								<p>
+									{cut(strip_tags($archive['introduce']),66)}… <a href="{$archive['url']}" target="_blank">[{lang('more')}]</a>
+								</p> {if $archive['pics']} {loop $archive['pics'] $pics}<img src="{$pics['url']}" alt="{$pics['alt']}" width="200" /> {/loop} {/if}
+								
+							</div> {/loop}
+						</div>
+					</div>
+					<div class="column layout_54485" style="margin-left: 30px;">
+						<div class="column">
+							{if isset($pages)}
+							<div class="blank30">
+							</div> {category_pagination($catid)}
+							<div class="blank30">
+							</div> {/if}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>{template 'footer.html'}

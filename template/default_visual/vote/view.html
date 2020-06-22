@@ -1,0 +1,56 @@
+{if vote::title($aid,1)}
+<!-- 页面标题开始 -->
+
+
+<h3><a>Vote</a>&nbsp;&nbsp;<small>投票</small></a></h3>
+					<span>——</span>
+
+					<hr class="featurette-divider"/>
+
+<form name="voteform" method="post" action="<?php echo url('vote/do'); ?>">
+	<input type="hidden" name="aid" value="{$aid}"/>
+
+
+            {if !vote::voted($aid,$user['username'])}
+
+
+	<?php $i=1; while(vote::title($aid,$i)) { ?>
+	<div class="radio">
+  <label>
+    {=form::radio('vote',$i,0)}
+    {vote::title($aid,$i)}
+  </label>
+</div>
+	<?php $i++; } unset($i); ?>
+
+	
+	<div class="blank10"></div>
+            {form::submit()} 
+
+            {else}
+
+
+
+	<div id="content_vote">
+		<?php $i=1; while(vote::title($aid,$i)) { ?>
+			{vote::title($aid,$i)}
+		<div class="blank5"></div>
+		<div class="progress">
+			<div class="progress-bar" role="progressbar" aria-valuenow="{=vote::get($aid,$i)}" aria-valuemin="0" aria-valuemax="100" style="width: {=vote::get($aid,$i)}%;">
+    {=vote::get($aid,$i)}
+			</div>
+		</div>
+		<?php $i++; } unset($i);?>
+		<div class="blank5"></div>
+	</div>
+
+
+            {/if}
+			</div>
+</form>
+{/if}
+<style type="text/css">
+.optionba {line-height:32px;}
+	#content_vote .checkbox-inline, .radio-inline {padding:0px;}
+	#content_vote >tbody>tr>td, #content_vote >tbody>tr>th,  #content_vote>tfoot>tr>td, #content_vote >tfoot>tr>th, #content_vote >thead>tr>td, #content_vote >thead>tr>th {border: none;}
+</style>

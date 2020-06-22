@@ -1,0 +1,14 @@
+
+{loop archive($_catid,$_typeid,$_spid,$_area,$_length,$_ordertype,$_limit,$_image,$_attr1,$_son,$_wheretype,$_tpl,$_intro_len,$_istop) $i $archive}
+{if $i%3==0}<div class="clearfix"></div>{else}{/if}
+<div class="img-auto col-lg-4 index-4">
+<a title="{$archive['stitle']}" target="_blank" href="{$archive['url']}" class="img-auto">
+<img alt="{$archive['stitle']}" src="{$archive['thumb']}" class="img-responsive"  /></a>
+<a title="{$archive['stitle']}" target="_blank" href="{$archive['url']}"><h4>{$archive['stitle']}<small>{$archive['subtitle']}</small></h4></a>
+
+{if $archive['attr2']}
+<p>{lang('price')}：{lang('unit')}<span>{$archive['attr2']} </span></p>
+{/if}
+</div>
+{/loop}
+

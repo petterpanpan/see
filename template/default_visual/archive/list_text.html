@@ -1,0 +1,72 @@
+{template 'header.html'}<div class="view-html">
+	<div class="container-fluid clearfix layout_262063">
+		<div class="row column">
+			<div class="clearfix">
+			</div>
+			<div class="column visual-slide">
+				{template 'system/cslide.html'}
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid clearfix layout_67908" style="margin-top: 15px; margin-bottom: 15px;">
+		<div class="row column">
+			<div class="clearfix">
+			</div>
+			<div class="container clearfix layout_863630">
+				<div class="row column">
+					<div class="clearfix">
+					</div>
+					<div class="column visual-category-notifications">
+						{template 'position.html'}
+						<div class="clearfix">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid clearfix layout_338152">
+		<div class="row column">
+			<div class="clearfix">
+			</div>
+			<div class="container clearfix layout_392307">
+				<div class="row column">
+					{loop $archives $i $archive}
+					<div class="news-list list-border">
+						<div class="list-date">
+							 <span>{=sdate($archive['adddate'],'d')}</span>
+							<p>
+								{=sdate($archive['adddate'],'Y-m')}
+							</p>
+						</div>
+						<h4>
+							<a title="{$archive['stitle']}" href="{$archive['url']}" target="_blank" class="list_page_t">{$archive['title']}</a>
+						</h4>
+						<p>
+							{cut(strip_tags($archive['introduce']),66)}… <a href="{$archive['url']}" target="_blank">[{lang('more')}]</a>
+						</p>
+					</div> {/loop}
+					<div class="clearfix">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid clearfix layout_296434">
+		<div class="row column">
+			<div class="container clearfix layout_480985">
+				<div class="row column">
+					<div class="column visual-list-page">
+						{if isset($pages)}
+						<div class="blank30">
+						</div> {category_pagination($catid)}
+						<div class="blank30">
+						</div> {/if}
+						<div class="clearfix">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>{template 'footer.html'}

@@ -1,0 +1,87 @@
+<div class="codearea">
+<div class="row">
+    #[#loop $archives $i $archive#]#
+	#[#if $i%3==0#]#<div class="clearfix"></div>#[#else#]##[#/if#]#
+   <div class="col-xs-12 col-sm-6 col-md-4">
+				<a href="#[#$archive['url']#]#" class="img-auto" target="_blank">
+				<img class="img-responsive" alt="#[#$archive['stitle']#]#" src="#[#$archive['thumb']#]#" /></a>
+				<h5><a href="#[#$archive['url']#]#" target="_blank">#[#$archive['title']#]#</a></h5>
+				<p>#[#lang('price')#]#：#[#lang('unit')#]#<span>#[#if $archive['attr2']}#[#$archive['attr2']#]##[#else#]##[#lang('not')#]##[#/if#]#</span></p>
+				</a>
+				</div>
+    #[#/loop#]#
+    <div class="clearfix"></div>
+	</div>
+</div>
+<div class="viewarea">
+    <div class="row">
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+<a class="img-auto">
+<img src="./images/admin/visual/temp/section/section-pic-1.jpg" class="img-responsive" />
+<h5>内容标题一</h5>
+<p>价格：￥<span>198</span></p>
+</a>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+<a class="img-auto">
+<img src="./images/admin/visual/temp/section/section-pic-2.jpg" class="img-responsive" />
+<h5>内容标题二</h5>
+</a>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+<a class="img-auto">
+<img src="./images/admin/visual/temp/section/section-pic-3.jpg" class="img-responsive" />
+<h5>内容标题三</h5>
+<p>价格：￥<span>无</span></p>
+</a>
+</div>
+<div class="clearfix"></div>
+<div class="col-xs-12 col-sm-6 col-md-4">
+<a class="img-auto">
+<img src="./images/admin/visual/temp/section/section-pic-4.jpg" class="img-responsive" />
+<h5>内容标题四</h5>
+<p>价格：￥<span>510</span></p>
+</a>
+</div>
+
+
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+<a class="img-auto">
+<img src="./images/admin/visual/temp/section/section-pic-5.jpg" class="img-responsive" />
+<h5>内容标题五</h5>
+<p>价格：￥<span>380</span></p>
+</a>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+<a class="img-auto">
+<img src="./images/admin/visual/temp/section/section-pic-6.jpg" class="img-responsive" />
+<h5>内容标题六</h5>
+<p>价格：￥<span>500</span></p>
+</a>
+</div>
+<div class="clearfix"></div>
+<div class="col-xs-12 col-sm-6 col-md-4">
+<a class="img-auto">
+<img src="./images/admin/visual/temp/section/section-pic-7.jpg" class="img-responsive" />
+<h5>内容标题七</h5>
+<p>价格：￥<span>870</span></p>
+</a>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+<a class="img-auto">
+<img src="./images/admin/visual/temp/section/section-pic-8.jpg" class="img-responsive" />
+<h5>内容标题八</h5>
+<p>价格：￥<span>200</span></p>
+</a>
+</div>
+    
+    <div class="clearfix"></div>
+
+	</div>
+</div>

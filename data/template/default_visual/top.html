@@ -1,0 +1,166 @@
+<div class="lyrow position-move ui-draggable box-layout" style="">
+<span class="drag drag-container label label-default div-up" title="上移"><i class="glyphicon glyphicon-arrow-up">
+                                                </i></span>
+
+<span class="drag drag-container label label-default div-down" title="下移"><i class="glyphicon glyphicon-arrow-down">
+                                                </i></span>
+
+<a href="#close" class="remove remove-container label label-danger" title="删除">
+        <i class="glyphicon-remove glyphicon">
+        </i>
+    </a>
+
+<span class="drag drag-container label label-default div-drag" data-target="#div-config" role="button" data-toggle="modal" title="层属性">
+        <i class="glyphicon glyphicon-cog" title="层属性"></i>		层属性
+    </span>
+
+<div class="preview">
+<img src="/images/admin/visual/section/nav.png">
+<p>导航</p>
+</div>
+<div class="view" contenteditable="true">
+
+<div class="container-fluid clearfix column navbar navbar-default layout_152551 ui-sortable">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="">
+<span class="sr-only">网站名称</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+<div class="box box-element box-pic ui-draggable top-nav-right navbar-right">
+    <a href="#close" class="remove label label-danger">
+        <i class="glyphicon-remove glyphicon" title="删除">
+        </i>
+    </a>
+<span class="drag drag-container label label-default div-drag" data-target="#div-config" role="button" data-toggle="modal">
+        <i class="glyphicon glyphicon-cog" title="层属性"></i>	层属性
+    </span>
+<div class="view">
+<div class="top-nav-right navbar-right layout_602435">
+<ul>
+<li id="fat-menu" class="dropdown">
+<a class="dropdown-toggleglyphicon glyphicon glyphicon-globe" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+<ul class="dropdown-menu" aria-labelledby="drop3">
+<div class="codearea">
+#[#loop getwebsite() $d#]#
+<li><a href="" target="_blank">#[#$d['name']#]#</a></li>
+#[#/loop#]#
+</div>
+<div class="viewarea">
+<li>
+<a href="http://test.cmseasy.cn/" target="_blank">公司网站</a>
+</li>
+</div>
+</ul>
+</li>
+<li class="glyphicon glyphicon-shopping-cart nav-shopping"><a href="/index.php?case=archive&act=orders&admin_dir=admin&site=default" target="_blank"></a></li>
+<li class="glyphicon glyphicon-search" data-toggle="modal" data-target=".bs-example-modal-lg-search" aria-hidden="true"></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="container">
+
+
+
+
+
+
+<div class="box box-element box-pic ui-draggable navbar-brand">
+    <a href="#close" class="remove label label-danger">
+        <i class="glyphicon-remove glyphicon" title="删除">
+        </i>
+    </a>
+    <span class="drag drag-container label label-default div-drag" data-target="#div-config" role="button" data-toggle="modal">
+        <i class="glyphicon glyphicon-cog" title="层属性"></i>	层属性
+    </span>
+
+
+
+
+
+    <span class="configuration configuration-pic"><a class="btn btn-config" data-target="#imageModel" role="button" data-toggle="modal" href="#">
+                                                        <i class="glyphicon glyphicon-picture" title="图片">
+        </i>
+                                                    </a></span>
+
+    <div class="preview">
+        <img src="./images/logo.png">
+        <p>图片</p>
+    </div>
+    <div class="view">
+        <div class="row layout_315462" style="float: left;">
+            <div class="codearea">
+<a href="#[#$site_url#]#" class="navbar-brand text-center"><img src="#[#get('site_logo')#]#" class="img-responsive" alt="#[#get('sitename')#]#"></a>
+</div>
+<div class="viewarea">
+<a href="#" class="navbar-brand text-center"><img src="/template_admin/admin/skin/images/visual/section/logo.png"></a>
+</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="nav" rel="nav(1)">
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="oen active"><a href="/">网站首页</a></li>
+<li class="oen dropdown">
+<a href="/index.php?case=archive&act=list&catid=1" data-toggle="dropdown" data-submenu="" class="toogle">关于我们<span class="caret"></span></a>
+<ul class="two dropdown-menu">
+<li>
+<a title="企业文化" href="/index.php?case=archive&act=list&catid=4">企业文化</a>
+</li>
+<li>
+<a title="职位招聘" href="/index.php?case=archive&act=list&catid=7">职位招聘</a>
+</li>
+<li>
+<a title="公司荣誉" href="/index.php?case=archive&act=list&catid=11">公司荣誉</a>
+</li>
+<li>
+<a title="发展历程" href="/index.php?case=archive&act=list&catid=12">发展历程</a>
+</li>
+</ul>
+</li>
+<li class="oen dropdown">
+<a href="/index.php?case=archive&act=list&catid=2" data-toggle="dropdown" data-submenu="" class="toogle">企业新闻<span class="caret"></span></a>
+<ul class="two dropdown-menu">
+<li>
+<a title="公司动态" href="/index.php?case=archive&act=list&catid=9">公司动态</a>
+</li>
+<li>
+<a title="行业新闻" href="/index.php?case=archive&act=list&catid=13">行业新闻</a>
+</li>
+</ul>
+</li>
+<li class="oen dropdown">
+<a href="/index.php?case=archive&act=list&catid=3" data-toggle="dropdown" data-submenu="" class="toogle">产品中心<span class="caret"></span></a>
+<ul class="two dropdown-menu">
+<li>
+<a title="文档下载" href="/index.php?case=archive&act=list&catid=6">文档下载</a>
+</li>
+<li>
+<a title="产品运营" href="/index.php?case=archive&act=list&catid=8">产品运营</a>
+</li>
+<li>
+<a title="产品设计" href="/index.php?case=archive&act=list&catid=10">产品设计</a>
+</li>
+</ul>
+</li>
+<li class="oen">
+<a href="/index.php?case=archive&act=list&catid=5" class="toogle">联系我们</a>
+</li>
+<li class="oen">
+<a href="/index.php?case=archive&act=list&catid=14" class="toogle">案例展示</a>
+</li>
+</ul>
+</div></div>
+
+
+
+</div>
+</div>
+</div>
+</div>

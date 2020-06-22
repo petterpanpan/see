@@ -1,0 +1,112 @@
+<div class="codearea">
+
+#[#loop categories($catid) $i $t#]#
+
+<!-- 页面标题开始 -->
+<div class="title">
+<h3><a title="#[#$t['typename']#]#" href="#[#category::url($t['catid'])#]#">#[#$t['catname']#]#<small>#[#$t['htmldir']#]#</small></a></h3>
+<p>#[#$t['subtitle']#]#</p>
+<span>——</span>
+</div>
+<!-- 页面标题结束 -->
+
+<!-- 中部开始 -->
+<div class="list-container">
+	#[#loop archive($t['catid'],0,0,'0,0,0',20,'aid',4,false,0) $i $archive#]#
+	#[#if $i%4==0#]#<div class="clearfix"></div>#[#else#]##[#/if#]#
+				<div class="post-masonry col-xs-12 col-sm-6 col-md-3">
+				<a href="#[#$archive['url']#]#" class="img-auto">
+				<img class="img-responsive" alt="#[#$archive['stitle']#]#" src="#[#$archive['thumb']#]#" onerror='onerror_pic(this)' />
+				<h4>#[#$archive['title']#]#</h4>
+				</a>
+				</div>
+	#[#/loop#]#
+	<!-- 内容列表结束 -->
+	<div class="blank30"></div>
+</div><!-- /container -->
+
+
+#[#/loop#]#
+
+ <div class="clearfix"></div>
+</div>
+<div class="viewarea">
+
+
+<!-- 页面标题开始 -->
+<div class="title">
+<h3><a title="">栏目一<small>HtmlDir</small></a></h3>
+<p>栏目副标题</p>
+<span>——</span>
+</div>
+<!-- 页面标题结束 -->
+
+<!-- 中部开始 -->
+<div class="list-container">
+
+<div class="clearfix"></div>
+<div class="post-masonry col-xs-12 col-sm-6 col-md-3">
+<a class="img-auto">
+<img src="./images/admin/visual/temp/section/section-pic-1.jpg" class="img-responsive" />
+<h4>内容标题一</h4>
+</a>
+</div>
+
+<div class="post-masonry col-xs-12 col-sm-6 col-md-3">
+<a class="img-auto">
+<img src="./images/admin/visual/temp/section/section-pic-2.jpg" class="img-responsive" />
+<h4>内容标题二</h4>
+</a>
+</div>
+
+<div class="post-masonry col-xs-12 col-sm-6 col-md-3">
+<a class="img-auto">
+<img src="./images/admin/visual/temp/section/section-pic-3.jpg" class="img-responsive" />
+<h4>内容标题三</h4>
+</a>
+</div>
+
+<div class="post-masonry col-xs-12 col-sm-6 col-md-3">
+<a class="img-auto">
+<img src="./images/admin/visual/temp/section/section-pic-4.jpg" class="img-responsive" />
+<h4>内容标题四</h4>
+</a>
+</div>
+<!-- 内容列表结束 -->
+<div class="blank30"></div>
+</div><!-- /container -->
+
+
+<!-- 页面标题开始 -->
+<div class="title">
+<h3><a title="" href="/index.php?case=archive&act=list&catid=9">栏目一<small>HtmlDir</small></a></h3>
+<p>栏目副标题</p>
+<span>——</span>
+</div>
+<!-- 页面标题结束 -->
+
+<!-- 中部开始 -->
+<div class="list-container">
+
+<div class="clearfix"></div>
+<div class="post-masonry col-xs-12 col-sm-6 col-md-3">
+<a class="img-auto">
+<img src="./images/admin/visual/temp/section/section-pic-5.jpg" class="img-responsive" />
+<h4>内容标题一</h4>
+</a>
+</div>
+
+<div class="post-masonry col-xs-12 col-sm-6 col-md-3">
+<a class="img-auto">
+<img src="./images/admin/visual/temp/section/section-pic-6.jpg" class="img-responsive" />
+<h4>内容标题二</h4>
+</a>
+</div>
+
+
+<!-- 内容列表结束 -->
+<div class="blank30"></div>
+</div><!-- /container -->
+
+ <div class="clearfix"></div>
+</div>

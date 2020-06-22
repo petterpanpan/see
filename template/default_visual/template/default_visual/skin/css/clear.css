@@ -1,0 +1,20 @@
+
+/* 公用去除bootstrap定义 */
+
+
+iframe {border:none;}
+.view .codearea{display: none;}
+.breadcrumb {margin-bottom:0px;}
+.btn-group-lg>.btn, .btn-lg {font-size:14px;}
+.visual-conent-car-btn .badge {background:#ffffff; color:#357ebd; font-size:12px; font-weight:normal;}
+
+
+/*内容时间框*/
+.hasDatepicker {padding-left:30px;}
+.ui-datepicker-trigger {position: absolute; left:20px; top:7px;}
+
+
+
+
+
+

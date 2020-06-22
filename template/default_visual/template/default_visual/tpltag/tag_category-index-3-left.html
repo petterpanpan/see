@@ -1,0 +1,11 @@
+{loop plugins::categoryinfo($_catid) $cat}
+
+
+
+{$cat['categorycontent']}
+
+<div class="blank60"></div>
+ <p class="text-center">
+<a title="{$c['catname']}" href="{$cat['url']}" class="btn btn-lg btn-primary" href="{$cat['url']}" role="button">{lang('more')}</a></p>
+</div>
+{/loop}

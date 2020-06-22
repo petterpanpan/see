@@ -1,0 +1,66 @@
+<div class="codearea">
+	<div class="table-job">
+		<ul class="th">
+			<li>#[#lang('recruitmentpost')#]#</li>
+			<li class="text-center">#[#lang('recruitingdepartment')#]#</li>
+			<li class="text-center">#[#lang('releasetime')#]#</li>
+			<li class="text-center">#[#lang('intro')#]#</li>
+		</ul>
+				#[#loop $archives $archive#]#
+		<ul>
+			<li><a title="#[#$archive['stitle']#]#" target="_blank" href="#[#$archive['url']#]#">#[#$archive['title']#]#</a></li>
+			<li class="text-center">#[#if $archive['my_zhaopinbumen']#]##[#$archive['my_zhaopinbumen']#]##[#else#]##[#lang('not')#]##[#/if#]#</li>
+			<li class="text-center">#[#$archive['adddate']#]#</li>
+			<li class="text-center"><a title="#[#$archive['stitle']#]#" target="_blank" href="#[#$archive['url']#]#" class="table_more">#[#lang('details')#]#</a></li>
+		</ul>
+				#[#/loop#]#
+		<div class="clearfix">
+		</div>
+	</div>
+</div>
+<div class="viewarea">
+	<div class="table-job">
+		<ul class="th">
+			<li>招聘职位</li>
+			<li class="text-center">招聘部门</li>
+			<li class="text-center">发布时间</li>
+			<li class="text-center">详细信息</li>
+		</ul>
+		<ul>
+			<li><a>业务经理</a></li>
+			<li class="text-center">营销部</li>
+			<li class="text-center">2015-08-04</li>
+			<li class="text-center"><a class="table_more">详情</a></li>
+		</ul>
+		<ul>
+			<li><a>业务</a></li>
+			<li class="text-center">企划部</li>
+			<li class="text-center">2015-08-04</li>
+			<li class="text-center"><a class="table_more">详情</a></li>
+		</ul>
+		<ul>
+			<li><a>技术工程师</a></li>
+			<li class="text-center">研发部</li>
+			<li class="text-center">2015-08-04</li>
+			<li class="text-center"><a class="table_more">详情</a></li>
+		</ul>
+		<ul>
+			<li><a>业务经理</a></li>
+			<li class="text-center">营销部</li>
+			<li class="text-center">2015-08-04</li>
+			<li class="text-center"><a class="table_more">详情</a></li>
+		</ul>
+		<ul>
+			<li><a>业务</a></li>
+			<li class="text-center">企划部</li>
+			<li class="text-center">2015-08-04</li>
+			<li class="text-center"><a class="table_more">详情</a></li>
+		</ul>
+		<ul>
+			<li><a>技术工程师</a></li>
+			<li class="text-center">研发部</li>
+			<li class="text-center">2015-08-04</li>
+			<li class="text-center"><a class="table_more">详情</a></li>
+		</ul>
+	</div>
+</div>

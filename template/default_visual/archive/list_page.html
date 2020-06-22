@@ -1,0 +1,75 @@
+{template 'header.html'}<div class="view-html">
+	<div class="container-fluid clearfix layout_657847">
+		<div class="row column">
+			<div class=" visual-slide">
+				{template 'system/cslide.html'}
+			</div>
+			<div class="container-fluid clearfix layout_716038" style="margin-top: 15px; margin-bottom: 30px;">
+				<div class="row column">
+					<div class="container clearfix layout_98982">
+						<div class="row column">
+							<div class=" visual-category-notifications">
+								{template 'position.html'}
+								<div class="clearfix">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid clearfix layout_16790 text-center" style="font-size: 20px; margin-top: 0px;">
+		<div class="row column">
+			<div class="container clearfix layout_808550">
+				<div class="row column">
+					<div class=" visual-category-title">
+						{$category[$catid]['catname']}
+						<div class="clearfix">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid clearfix layout_650516" style="margin-top: 20px; margin-bottom: 0px;">
+		<div class="row column">
+			<div class="container clearfix layout_61342">
+				<div class="row column">
+					<div class="hr">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid clearfix layout_771288">
+		<div class="row column">
+			<div class="container clearfix layout_590439">
+				<div class="row column">
+					<div class=" visual-category-title">
+						<div class="content_tools_box">
+							<p class="content_tools">
+								 <a href="javascript:CallPrint('print');">{lang('printcontent')}</a> <a href="javascript:doZoom(14)">{lang('small')}</a> <a href="javascript:doZoom(18)">{lang('middle')}</a> <a href="javascript:doZoom(20)">{lang('big')}</a>
+							</p>
+							<div class="clearfix">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid clearfix layout_951640">
+		<div class="row column">
+			<div class="container clearfix layout_228009">
+				<div class="row column">
+					<div class=" visual-category-content">
+						{$category[$catid]['categorycontent']}
+						<div class="clearfix">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>{template 'footer.html'}

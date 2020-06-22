@@ -1,0 +1,34 @@
+<div class="view-html">
+	<div class="container-fluid clearfix column navbar navbar-default layout_152551">
+		 
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+			 <span class="sr-only">网站名称</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+		</button>
+		<div class="container">
+			{nav(1)}
+			<div class="row layout_315462" style="float: left;">
+				 <a href="{$site_url}" class="navbar-brand text-center"><img src="{get('site_logo')}" class="img-responsive" alt="{get('sitename')}"></a>
+			</div>
+		</div>
+		<div class="top-nav-right navbar-right layout_602435">
+			<ul>
+				<li id="fat-menu" class="dropdown">
+					<a class="dropdown-toggleglyphicon glyphicon glyphicon-globe" data-toggle="dropdown" role="button" aria-expanded="false"></a>
+					<ul class="dropdown-menu" aria-labelledby="drop3">
+						<li>
+							<a id="StranLink" name="StranLink">繁體</a>
+						</li> {loop getwebsite() $d}
+						<li>
+							<a target="_blank">{$d['name']}</a>
+						</li> {/loop}
+					</ul>
+				</li>
+				<li class="glyphicon glyphicon-shopping-cart nav-shopping">
+					<a href="/index.php?case=archive&act=orders&admin_dir=admin&site=default" target="_blank"></a>
+				</li>
+				<li class="glyphicon glyphicon-search" data-toggle="modal" data-target=".bs-example-modal-lg-search" aria-hidden="true">
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
