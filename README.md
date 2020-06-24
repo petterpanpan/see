@@ -1,28 +1,49 @@
-﻿Fly Template 由 layui 官方社区（Fly社区）倾情抽取，页面基于 layui 搭建而成，可很好地作为简约通用型社区的页面支撑。我们希望通过该模板表明我们对 layui 执着的信念、以及对未来持续加强的承诺。
+# calmlog
 
-# 目录说明  
-```
-├─html 可直接预览的模板文件
-├─res 静态资源
-│  ├─css
-│  ├─images
-│  ├─layui
-│  └─mods 模板业务模块
-└─views 动态模板参考（NodeJS端）
-```
 
-# 字符解析
-该模板自带一个特定语法的编辑器，当你把内容存储到数据库后，在页面读取后浏览，会发现诸如“表情、代码、图片”等无法解析，这是因为需要对该内容进行一次转义，通常来说这是在服务端完成的，但鉴于简单化，你还可以直接在前端去解析，在模板的detail.html中，我们已经把相关的代码写好了，你只需打开注释即可（在代码的最下面）。
+### 模板描述
 
-当然，如果觉得编辑器无法满足你的需求，你也可以把该编辑器换成别的HTML编辑器或MarkDown编辑器。
+JPress 博客主题，响应式设计，自适应移动端设备浏览，适用于自媒体，新闻，杂志，博客等类型站点。
 
-# 预览地址
-http://www.layui.com/template/fly/demo/html/catalog.html
 
-# 开源协议
-MIT License
+### 模板特点
 
-# 社区相关
-* [Fly社区](http://fly.layui.com/)
-* [码云](https://gitee.com/sentsin/fly/)
-* [GitHub](https://github.com/layui/fly)
+* 舒适双栏设计风格；
+* 采用HTML5和CSS3编写；
+* 采用Bootstrap 4编写；
+* 响应式布局（台式机、平板电脑、移动设备）
+* 对于后台开发，代码友好；
+* 清新、现代化设计；
+* 自然舒适动画效果；
+* 支持各类型代码高亮显示；
+
+
+### 浏览器支持
+
+BlueLight支持所有现代浏览器（Chrome，Firefox，Safari），包括IE11和Edge。
+
+
+### 效果展示
+
+![](./screenshots/index.png)
+![](./screenshots/details.png)
+![](./screenshots/phone.png)
+
+
+### JPress 官网
+
+http://www.jpress.io
+
+
+### JPress School
+
+https://mp.weixin.qq.com/s/GbNv0xaK6jruWqTDJ_Ospw
+
+
+### 联系Jean
+
+* 有关本模板的任何问题，欢迎添加Jean讨论；
+* 后续更多开源模板，请添加Jean持续关注；
+* 需要sketch文件，Jean很乐意分享；
+* 喜欢Jean的风格，期待找Jean定制。
+* ![](./screenshots/wechat.jpg)
