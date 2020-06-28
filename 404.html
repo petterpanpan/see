@@ -2,6 +2,35 @@
 <html lang="zh">
 
 <head>
+    server {
+
+    listen 80;
+
+    server_name www.ostay.cn;
+
+    root /data/html/app;
+
+    index  index.html index.htm;
+
+    set $seo 0;
+    if ($http_user_agent ~* "baiduspider|360Spider|HaoSouSpider|Googlebot|YoudaoBot|twitterbot|facebookexternalhit|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator|Bingbot|BingPreview|Sogou web spider|Sogou inst spider|YisouSpider") {
+        set $seo 1;
+    }
+    if ($args ~ "_escaped_fragment_") {
+        set $seo 1;
+    }
+
+    if ($uri ~ "\.(js|css|xml|less|png|jpg|jpeg|gif|pdf|doc|txt|ico|rss|zip|mp3|rar|exe|wmv|doc|avi|ppt|mpg|mpeg|tif|wav|mov|psd|ai|xls|mp4|m4a|swf|dat|dmg|iso|flv|m4v|torrent|ttf|woff)") {
+        set $seo 0;
+    }
+    location / {
+        #add_header seo $seo; for test
+        if ($seo = 1) {
+            # rewrite .* http://localhost:9999;
+            proxy_pass http://seo.arvix.cn;
+        }
+   }
+}
     <meta charset="utf-8">
     <title>webstack - 404</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
