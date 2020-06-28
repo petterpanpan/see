@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh">
+$route['default_controller'] = 'main';
+$route['404_override'] = 'pagenotfound';
+$route['translate_uri_dashes'] = FALSE;
 
+$route['sitemap\.xml'] = "Sitemap/index";
 <head>
     import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
