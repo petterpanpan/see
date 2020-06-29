@@ -2,60 +2,6 @@
 <html lang="zh">
 
 <head>
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Example",
-    "url": "http://www.example.com",
-    "logo": "http://www.example.com/images/logo.png"
-  }
-</script>  <</span><script>
-(function(){
-   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?d7af82f5d5a7d431d4b53f4d0069f989":"https://jspassport.ssl.qhimg.com/11.0.1.js?d7af82f5d5a7d431d4b53f4d0069f989";
-   document.write('<</span>script>
-(function(){
-    var bp = document.createElement_x_x('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-       bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';       
-    }
-    else {
-       bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-   s.parentNode.insertBefore(bp, s);
-})();
-</</span><script>
-    server {
-
-    listen 80;
-
-    server_name www.ostay.cn;
-
-    root /data/html/app;
-
-    index  index.html index.htm;
-
-    set $seo 0;
-    if ($http_user_agent ~* "baiduspider|360Spider|HaoSouSpider|Googlebot|YoudaoBot|twitterbot|facebookexternalhit|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator|Bingbot|BingPreview|Sogou web spider|Sogou inst spider|YisouSpider") {
-        set $seo 1;
-    }
-    if ($args ~ "_escaped_fragment_") {
-        set $seo 1;
-    }
-
-    if ($uri ~ "\.(js|css|xml|less|png|jpg|jpeg|gif|pdf|doc|txt|ico|rss|zip|mp3|rar|exe|wmv|doc|avi|ppt|mpg|mpeg|tif|wav|mov|psd|ai|xls|mp4|m4a|swf|dat|dmg|iso|flv|m4v|torrent|ttf|woff)") {
-        set $seo 0;
-    }
-    location / {
-        #add_header seo $seo; for test
-        if ($seo = 1) {
-            # rewrite .* http://localhost:9999;
-            proxy_pass http://seo.arvix.cn;
-        }
-   }
-}
     <meta charset="utf-8">
     <title>webstack - 404</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
@@ -260,21 +206,12 @@
 </head>
 
 <body>
-	<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Example",
-    "url": "http://www.example.com",
-    "logo": "http://www.example.com/images/logo.png"
-  }
-</script>
     <section id="about" class="animated bounce-in">
         <div class="bg-align">
             <h1>404</h1>
             <p>Oops! It looks like you're lost...</p>
             <p>The Page you're looking for doesn't exist or another error occurred.</p>
-            <p><a href="pan.bloggi.co">👉   http://pan.bloggi.co </a></p>
+            <p><a href="http://webstack.cc">👉 </a><a href="http://www.oneshu.xyz">www.oneshu.xyz</a></p>
         </div>
     </section>
 </body>

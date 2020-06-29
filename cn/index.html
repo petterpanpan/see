@@ -2,16 +2,6 @@
 <html lang="zh">
 
 <head>
-	
-	<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Example",
-    "url": "http://www.example.com",
-    "logo": "http://www.example.com/images/logo.png"
-  }
-</script>
     <script async src = "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" >
     </script>
     <script>
@@ -66,12 +56,6 @@
 </head>
 
 <body class="page-body">
-	<script>  
-(function(){  
-var src = “https://www.oneshu.xyz”;  
-document.write(‘<script src=“‘ + src + ‘” id=“sozz”><\/script>’);  
-})();  
-<\\\\/script>  
     <!-- skin-white -->
     <div class="page-container">
         <div class="sidebar-menu toggle-others fixed">
@@ -329,8 +313,9 @@ document.write(‘<script src=“‘ + src + ‘” id=“sozz”><\/script>’)
                     </li>
                 </ul>
                 <ul class="user-info-menu right-links list-inline list-unstyled">
-                    <li class="hidden-sm hidden-xs"> </li>
+                  <li class="hidden-sm hidden-xs"> <a href="https://pan.bloggi.co" target="_blank"> <em class="fa-github"></em> GitHub </a> </li>
                 </ul>
+                
                 <!-- <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a> -->
 
             </nav>
@@ -4214,7 +4199,7 @@ document.write(‘<script src=“‘ + src + ‘” id=“sozz”><\/script>’)
                     <!-- Add your copyright text here -->
                     <div class="footer-text">
                         &copy; 2017-2020
-                        <a href="../cn/about.html"><strong>WebStack</strong></a> design by <a href="http://viggoz.com" target="_blank"><strong>pan</strong></a>
+                        <a href="../cn/about.html"><strong>WebStack</strong></a> design by <a href="http://viggoz.com" target="_blank"><strong>Viggo</strong></a>
                         <!--  - Purchase for only <strong>23$</strong> -->
                     </div>
                     <!-- Go to Top Link, just add rel="go-top" to any link to add this functionality -->
@@ -4300,87 +4285,16 @@ document.write(‘<script src=“‘ + src + ‘” id=“sozz”><\/script>’)
     <!-- JavaScripts initializations and stuff -->
     <script src="../assets/js/xenon-custom.js"></script>
     <script src="../assets/js/lozad.js"></script>
+	<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Example",
+    "url": "http://www.example.com",
+    "logo": "http://www.example.com/images/logo.png"
+  }
+</script>
+
 </body>
-import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;  
- private static final String BASE_URL = "https://www.baidu.com/s?wd=site:";   
 
-    /**
-     * 查询网址是否被收录
-     */
-
- public Object getIncluded(String url) {
-        Map<String,Object> map = new HashMap<String, Object>();
-        boolean a = true;
-        a = true;
-        while (a) {
-            String data = this.html(url);
-            if(data.length()<2000){
-                System.out.println(data);
-                try {
-                    Thread.sleep(100);
-
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }else{
-            //找到相关结果数约
-            String startLabel = "<span class=\"nums_text\">";
-            String endLabel = "</span>";
-            int start = data.indexOf(startLabel)+startLabel.length();
-            int end =  data.indexOf(endLabel,start);
-            String Result = data.substring(start, end);
-
-            String str = Result;
-            str=str.trim();
-            String str2="";
-            if(str != null && !"".equals(str)){
-                for(int i=0;i<str.length();i++){
-                    if(str.charAt(i)>=48 && str.charAt(i)<=57){
-                        str2+=str.charAt(i);
-                    }
-                }
-            }
-            map.put("number", str2);
-            if("0".equals(str2)){map.put("type",false);}else{map.put("type",true);}
-            a=false;
-            }
-        }
-        return map;
-    }
-
- 
-
-/**
-     * 请求百度搜索结果页，并返回html源码
-     */
-    private String html(String keywords) {
-        String html = null;
-        try {
-            String url = BASE_URL + keywords;
-            CloseableHttpClient client = HttpClients.createDefault();
-            HttpGet get = new HttpGet(url);
-            try {
-                get.addHeader("Accept-Language","*,*;q=0.9,zh-TW;q=0.9");
-                get.addHeader("User-Agent", "Chrome/77.0.3865.120 Safari/537.36");
-                CloseableHttpResponse response = client.execute(get);
-                HttpEntity entity = response.getEntity();
-                if (entity != null) {
-                    html = EntityUtils.toString(entity);
-                }
-                EntityUtils.consume(entity);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return html;
-    }
 </html>

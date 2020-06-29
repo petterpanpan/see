@@ -58,7 +58,7 @@
                 </a>
             </div>
             <div class="navbar-mobile-clear"></div>
-            <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank"></a>
+            <a href="https://pan.bloggi.co" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
         </div>
     </nav>
     <div class="page-container">
@@ -73,20 +73,36 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <blockquote>
-                                      <p> 当你在失落是看到这里， 我将是你的心灵慰藉。 当你在开心是看到这里， 我将是你的添加剂。 无论你在哪里， 在干什么， 当你想起我的分享， 这就是一件让人高兴 又有意义的事情。 我分享美，制造美， 但不否定美。 我就是我，不一样的我。</p>
+                                      <p>当你在失落是看到这里， 我将是你的心灵慰藉。 当你在开心是看到这里， 我将是你的添加剂。 无论你在哪里， 在干什么， 当你想起我的分享， 这就是一件让人高兴 又有意义的事情。 我分享美，制造美， 但不否定美。 我就是我，不一样的我。</p>
                                       </br>
                                       <p>如果你也是设计师，如果你也正好喜欢设计，那希望这个网站能给你带来一些作用。</p>
-</blockquote>
+                                      <p>闲聊或者有任何建议都可以加订阅号：朝丽雨月 zhaoli-yuyue</p>
+                                    </blockquote>
                                 </div>
                             </div>
                             <!-- 关于站长 -->
-                            <h4 class="text-gray"><a href="pan.bloggi.co">关于站长</a></h4>
+                            <h4 class="text-gray">关于站长</h4>
                             <div class="row">
-<div class="col-md-8">
-                  <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('http://www.viggoz.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="http://www.viggoz.com/">
+                                        <div class="xe-comment-entry">
+                                            <a class="xe-user-img">
+                                            </a>
+                                            <div class="xe-comment"><a href="#" class="xe-user-name overflowClip_1"> </a><strong><a href="#" class="xe-user-name overflowClip_1">Designer. </a><a href="#https://www.patreon.com/panyu">pan</a><a href="#" class="xe-user-name overflowClip_1">.</a></strong><a href="#" class="xe-user-name overflowClip_1"> </a>
+                                              <p class="overflowClip_2"> Full-time UI designer with an enduring interest in Coding.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row">
                                         <div class="col-sm-12">
                                             <br />
-                                            <blockquote>&nbsp; </blockquote>
+                                            <blockquote>
+                                                <p><a href="https://github.com/WebStackPage/WebStackPage.github.io">&nbsp;</a>我的今日头条——<a href="https://pan.bloggi.co">一条松鼠</a>
+                                                  <iframe src="https://ghbtns.com/github-btn.html?user=WebStackPage&repo=WebStackPage.github.io&type=star&count=true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                                                    &nbsp;</p>
+                                            </blockquote>
                                         </div>
                                     </div>
                                     <br>
@@ -99,7 +115,9 @@
             <!-- Main Footer -->
             <footer class="main-footer sticky footer-type-1 fixed">
                 <div class="footer-inner">
-                    <div class="footer-text">&copy; 2017 - 2020 <a href="../cn/about.html"><strong>WebStack</strong></a> design by <strong><a href="pan.bloggi.co">pan</a></strong></div>
+                    <div class="footer-text">
+                      <p> &copy; 2017 - 2020 <a href="../cn/about.html"><strong>WebStack</strong></a> design by <strong><a href="https://pan.bloggi.co">pan</a></strong>&nbsp;</p>
+                    </div>
                     <div class="go-up">
                         <a href="#" rel="go-top">
                             <i class="fa-angle-up"></i>
@@ -119,96 +137,6 @@
     <!-- JavaScripts initializations and stuff -->
     <script src="assets/js/xenon-custom.js"></script>
     <textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none; height: 0px !important; min-height: 0px !important; font-family: Arimo, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-indent: 0px; line-height: 18.5714px; width: 53px;" class="autosizejs" id="autosizejs"></textarea>
-	import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;  
- private static final String BASE_URL = "https://www.baidu.com/s?wd=site:";   
-
-    /**
-     * 查询网址是否被收录
-     */
-
- public Object getIncluded(String url) {
-        Map<String,Object> map = new HashMap<String, Object>();
-        boolean a = true;
-        a = true;
-        while (a) {
-            String data = this.html(url);
-            if(data.length()<2000){
-                System.out.println(data);
-                try {
-                    Thread.sleep(100);
-
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }else{
-            //找到相关结果数约
-            String startLabel = "<span class=\"nums_text\">";
-            String endLabel = "</span>";
-            int start = data.indexOf(startLabel)+startLabel.length();
-            int end =  data.indexOf(endLabel,start);
-            String Result = data.substring(start, end);
-
-            String str = Result;
-            str=str.trim();
-            String str2="";
-            if(str != null && !"".equals(str)){
-                for(int i=0;i<str.length();i++){
-                    if(str.charAt(i)>=48 && str.charAt(i)<=57){
-                        str2+=str.charAt(i);
-                    }
-                }
-            }
-            map.put("number", str2);
-            if("0".equals(str2)){map.put("type",false);}else{map.put("type",true);}
-            a=false;
-            }
-        }
-        return map;
-    }
-
- 
-
-/**
-     * 请求百度搜索结果页，并返回html源码
-     */
-    private String html(String keywords) {
-        String html = null;
-        try {
-            String url = BASE_URL + keywords;
-            CloseableHttpClient client = HttpClients.createDefault();
-            HttpGet get = new HttpGet(url);
-            try {
-                get.addHeader("Accept-Language","*,*;q=0.9,zh-TW;q=0.9");
-                get.addHeader("User-Agent", "Chrome/77.0.3865.120 Safari/537.36");
-                CloseableHttpResponse response = client.execute(get);
-                HttpEntity entity = response.getEntity();
-                if (entity != null) {
-                    html = EntityUtils.toString(entity);
-                }
-                EntityUtils.consume(entity);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return html;
-    }<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Example",
-    "url": "http://www.example.com",
-    "logo": "http://www.example.com/images/logo.png"
-  }
-</script>
 </body>
 
 </html>
